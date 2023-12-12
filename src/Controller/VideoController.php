@@ -8,11 +8,12 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class VideoController extends AbstractController
 {
-    #[Route('/video', name: 'app_video')]
+    /**
+     * @Route("/video", name="index_videos")
+     */
     public function index(): Response
     {
-        return $this->render('video/index.html.twig', [
-            'controller_name' => 'VideoController',
-        ]);
+        return $this->render('video/index.html.twig');
     }
 }
+
