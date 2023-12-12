@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ajouter une Chaîne{% endblock %}
+
+{% block body %}
+    <h1>Ajouter une Chaîne</h1>
+
+    {{ form_start(form) }}
+
+    <div>
+        {{ form_label(form.libelle) }}
+        {{ form_widget(form.libelle) }}
+    </div>
+
+    <div>
+        {{ form_label(form.diffuseur) }}
+        {{ form_widget(form.diffuseur) }}
+    </div>
+
+    <button type="submit">Ajouter</button>
+
+    {{ form_end(form) }}
+{% endblock %}

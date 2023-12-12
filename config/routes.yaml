@@ -1,0 +1,33 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+
+accueil:
+    path: /
+    controller: App\Controller\ChaineController::listeChaines
+
+videos:
+    path: /videos
+    controller: App\Controller\VideoController::listeVideos
+
+chaine_par_id:
+    path: /chaine/{id}
+    controller: App\Controller\ChaineController::listeVideosParChaine
+    requirements:
+        id: \d+
+
+recherche:
+    path: /recherche
+    controller: App\Controller\ChaineController::rechercheChaines
+
+ajouter_chaine:
+    path: /chaine/ajouter
+    controller: App\Controller\ChaineController::ajouterChaine
+
+editer_chaine:
+    path: /chaine/editer/{id}
+    controller: App\Controller\ChaineController::editerChaine
+    requirements:
+        id: \d+

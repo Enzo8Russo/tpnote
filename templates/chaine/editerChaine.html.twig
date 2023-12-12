@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Éditer une Chaîne{% endblock %}
+
+{% block body %}
+    <h1>Éditer une Chaîne</h1>
+
+    {{ form_start(form) }}
+
+    <div>
+        {{ form_label(form.libelle) }}
+        {{ form_widget(form.libelle) }}
+    </div>
+
+    <div>
+        {{ form_label(form.diffuseur) }}
+        {{ form_widget(form.diffuseur) }}
+    </div>
+
+    <button type="submit">Enregistrer les modifications</button>
+
+    {{ form_end(form) }}
+{% endblock %}

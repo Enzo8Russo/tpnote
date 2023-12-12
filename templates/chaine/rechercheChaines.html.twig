@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Recherche des Chaînes{% endblock %}
+
+{% block body %}
+    <h1>Recherche des Chaînes</h1>
+
+    <form action="{{ path('recherche') }}" method="get">
+        <label for="libelle">Libellé :</label>
+        <input type="text" id="libelle" name="libelle">
+        <button type="submit">Rechercher</button>
+    </form>
+
+    {% if chaines is not empty %}
+        <h2>Résultats de la recherche :</h2>
+        <ul>
+            {% for chaine in chaines %}
+                <li>{{ chaine.libelle }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Aucun résultat trouvé.</p>
+    {% endif %}
+{% endblock %}
